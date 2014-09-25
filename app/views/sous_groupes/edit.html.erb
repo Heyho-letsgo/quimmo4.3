@@ -1,6 +1,5 @@
-<h1>Editing sous_groupe</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @sous_groupe %> |
-<%= link_to 'Back', sous_groupes_path %>
+<%- model_class = SousGroupe -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => SousGroupe %></h1>
+</div>
+<%= render :partial => 'form' %>
