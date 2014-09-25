@@ -1,0 +1,27 @@
+<h1>Listing sous_groupes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Principal groupe</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sous_groupes.each do |sous_groupe| %>
+      <tr>
+        <td><%= sous_groupe.nom %></td>
+        <td><%= sous_groupe.principal_groupe %></td>
+        <td><%= link_to 'Show', sous_groupe %></td>
+        <td><%= link_to 'Edit', edit_sous_groupe_path(sous_groupe) %></td>
+        <td><%= link_to 'Destroy', sous_groupe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sous groupe', new_sous_groupe_path %>
